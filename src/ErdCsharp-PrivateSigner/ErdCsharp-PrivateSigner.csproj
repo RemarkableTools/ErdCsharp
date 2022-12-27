@@ -1,0 +1,38 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>C# SDK for interacting with the Elrond Wallet.</Description>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net461;net47;net5.0;net6.0;net7.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>Erd-PrivateWallet</PackageId>
+    <Authors></Authors>
+    <Product />
+    <PackageTags>Erd</PackageTags>
+    <PackageLicenseExpression></PackageLicenseExpression>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl></RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Company />
+    <Version>1.0.0</Version>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PackageLicenseFile></PackageLicenseFile>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System.Numerics" Version="4.0.0.0" />
+    <Reference Include="System.Web" Version="4.0.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net47' ">
+    <Reference Include="System.Web" Version="4.0.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ErdCsharp\ErdCsharp.csproj" />
+  </ItemGroup>
+</Project>

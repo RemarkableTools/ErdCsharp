@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Description>⚡ Elrond C# SDK: Complex library for interacting with Elrond API</Description>
+    <TargetFrameworks>netstandard2.0;netcoreapp3.1;net461;net47;net5.0;net6.0;net7.0</TargetFrameworks>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>ErdCsharp</PackageId>
+    <Authors>Remarkable Tools</Authors>
+    <Product />
+    <PackageTags>Elrond;MultiversX;ErdCsharp;ErdDotNet</PackageTags>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/RemarkableTools/ErdCsharp</RepositoryUrl>
+    <RepositoryType>GitHub</RepositoryType>
+    <Company>Remarkable Tools</Company>
+    <Version>2.0.0</Version>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Title>ErdCsharp</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackAsTool>False</PackAsTool>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <Copyright>Copyright © Remarkable Tools 2022</Copyright>
+    <PackageIcon>RemarkableToolsPackage.jpg</PackageIcon>
+    <PackageReleaseNotes>SDK public release</PackageReleaseNotes>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|net6.0|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Release|net6.0|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="..\..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\RemarkableToolsPackage.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="dotnetstandard-bip39" Version="1.0.2" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net461' ">
+    <Reference Include="System.Numerics" Version="4.0.0.0" />
+    <Reference Include="System.Web" Version="4.0.0.0" />
+  </ItemGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net47' ">
+    <Reference Include="System.Web" Version="4.0.0.0" />
+  </ItemGroup>
+</Project>
