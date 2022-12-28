@@ -63,7 +63,7 @@ namespace ErdCsharp.Domain
             string message = null)
         {
             var transaction = Create(account, networkConfig, address, value);
-            transaction.Data = DataCoder.EncodeData(message);
+            transaction.Data = message;
             transaction.SetGasLimit(GasLimit.ForTransaction(networkConfig, transaction));
             return transaction;
         }
