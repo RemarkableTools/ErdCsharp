@@ -23,14 +23,18 @@ var bech32Address = "BECH32_ADDRESS";
 var account = Account.From(await provider.GetAccount(bech32Address));
 var receiverAddress = Address.FromBech32("RECEIVER_ADDRESS");
 ```
+Get a token from network
+```csharp
+var token = Token.From(await provider.GetToken("OFE-29eb54"));
+```
 Create the [`Transaction Request`](https://github.com/RemarkableTools/ErdCsharp/blob/master/src/ErdCsharp/Domain/TransactionRequest.cs)
 ```csharp
 var transactionRequest = TokenTransactionRequest.TokenTransfer(
     networkConfig,
     account,
     receiverAddress,
-    "OFE-29eb54",
-    100);
+    token.Identifier.Value,
+    ESDTAmount.ESDT("100", token.GetESDT()).Value);
 ```
 Use the [`Private Signer`](https://github.com/RemarkableTools/ErdCsharp/blob/master/src/ErdCsharp-PrivateSigner/PrivateSigner.cs) to sign the transaction
 ```csharp
