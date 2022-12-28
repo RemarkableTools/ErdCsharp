@@ -24,7 +24,7 @@ namespace ErdCsharp.Domain
         public static GasLimit ForEGLDTransaction(NetworkConfig networkConfig, TransactionRequest transaction)
         {
             var value = networkConfig.MinGasLimit;
-            return new GasLimit(value + networkConfig.GasPerDataByte * transaction.Data.Length);
+            return new GasLimit(value) + FromData(networkConfig, transaction.Data);
         }
 
         /// <summary>
