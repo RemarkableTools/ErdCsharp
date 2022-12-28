@@ -64,7 +64,7 @@ namespace ErdCsharp.Domain
         {
             var transaction = Create(account, networkConfig, address, value);
             transaction.Data = message;
-            transaction.SetGasLimit(GasLimit.ForTransaction(networkConfig, transaction));
+            transaction.SetGasLimit(GasLimit.ForEGLDTransaction(networkConfig, transaction));
             return transaction;
         }
 

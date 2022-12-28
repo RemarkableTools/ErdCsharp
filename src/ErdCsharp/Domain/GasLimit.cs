@@ -21,10 +21,10 @@ namespace ErdCsharp.Domain
         /// <param name="networkConfig">The network config</param>
         /// <param name="transaction">The transaction</param>
         /// <returns>A GasLimit</returns>
-        public static GasLimit ForTransaction(NetworkConfig networkConfig, TransactionRequest transaction)
+        public static GasLimit ForEGLDTransaction(NetworkConfig networkConfig, TransactionRequest transaction)
         {
             var value = networkConfig.MinGasLimit;
-            return new GasLimit(value) + FromData(networkConfig, transaction.Data);
+            return new GasLimit(value + networkConfig.GasPerDataByte * transaction.Data.Length);
         }
 
         /// <summary>
