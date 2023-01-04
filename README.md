@@ -1,5 +1,5 @@
 ## ErdCsharp
-⚡ Multiversx C# SDK: Complex library for interacting with MultiversX API
+⚡ MultiversX C# SDK: Complex library for interacting with MultiversX API
 
 ## Main Features
 - Querying blockchain data
