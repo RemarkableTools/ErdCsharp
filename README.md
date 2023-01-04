@@ -1,5 +1,5 @@
 ## ErdCsharp
-⚡ Elrond C# SDK: Unique library for interacting with Elrond API
+⚡ Multiversx C# SDK: Complex library for interacting with MultiversX API
 
 ## Main Features
 - Querying blockchain data

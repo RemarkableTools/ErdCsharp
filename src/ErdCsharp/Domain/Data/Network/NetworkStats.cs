@@ -32,9 +32,9 @@ namespace ErdCsharp.Domain.Data.Network
         /// <summary>
         /// Gets the Network Stats
         /// </summary>
-        /// <param name="provider">Elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <returns>NetworkEconomics</returns>
-        public static async Task<NetworkStats> GetFromNetwork(IElrondProvider provider)
+        public static async Task<NetworkStats> GetFromNetwork(IMultiversxProvider provider)
         {
             return new NetworkStats(await provider.GetNetworkStats());
         }

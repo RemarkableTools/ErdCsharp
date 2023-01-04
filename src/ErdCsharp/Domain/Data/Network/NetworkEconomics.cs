@@ -34,9 +34,9 @@ namespace ErdCsharp.Domain.Data.Network
         /// <summary>
         /// Gets the Network Economics
         /// </summary>
-        /// <param name="provider">Elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <returns>Economics</returns>
-        public static async Task<NetworkEconomics> GetFromNetwork(IElrondProvider provider)
+        public static async Task<NetworkEconomics> GetFromNetwork(IMultiversxProvider provider)
         {
             return new NetworkEconomics(await provider.GetNetworkEconomics());
         }

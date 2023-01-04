@@ -188,11 +188,48 @@ namespace ErdCsharp.Domain.Data.Transaction
         }
 
         /// <summary>
+        /// Creates a new array of Transactions from data
+        /// </summary>
+        /// <param name="transactions">Array of Transaction Data Objects from API</param>
+        /// <returns>Array of Transaction objects</returns>
+        public static Transaction[] From(TransactionDto[] transactions)
+        {
+            return transactions.Select(transaction => new Transaction()
+            {
+                TxHash = transaction.TxHash,
+                GasLimit = new GasLimit(transaction.GasLimit),
+                GasPrice = transaction.GasPrice,
+                GasUsed = new GasLimit(transaction.GasUsed),
+                MiniBlockHash = transaction.MiniBlockHash,
+                Nonce = transaction.Nonce,
+                Receiver = Address.FromBech32(transaction.Receiver),
+                ReceiverAssets = Assets.From(transaction.ReceiverAssets),
+                ReceiverShard = transaction.ReceiverShard,
+                Round = transaction.Round,
+                Sender = Address.FromBech32(transaction.Sender),
+                SenderAssets = Assets.From(transaction.SenderAssets),
+                SenderShard = transaction.SenderShard,
+                Signature = transaction.Signature,
+                Status = transaction.Status,
+                Value = ESDTAmount.From(transaction.Value),
+                Fee = ESDTAmount.From(transaction.Fee),
+                CreationDate = Converter.TimestampToDateTime(transaction.Timestamp),
+                Data = DataCoder.DecodeData(transaction.Data),
+                Function = transaction.Function,
+                Action = Common.Action.From(transaction.Action),
+                SmartContractResult = Common.SmartContractResult.From(transaction.Results),
+                EGLDPrice = transaction.Price,
+                Logs = Log.From(transaction.Logs),
+                Operations = Operation.From(transaction.Operations)
+            }).ToArray();
+        }
+
+        /// <summary>
         /// Synchronizes the transaction fields with the ones queried from the Network
         /// </summary>
-        /// <param name="provider">Elrond Provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <returns></returns>
-        public async Task Sync(IElrondProvider provider)
+        public async Task Sync(IMultiversxProvider provider)
         {
             var transaction = await provider.GetTransaction(TxHash);
 
@@ -294,7 +331,7 @@ namespace ErdCsharp.Domain.Data.Transaction
         /// <summary>
         /// Wait for the execution of the transaction
         /// </summary>
-        /// <param name="provider">Elrond Provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <param name="msCheck">Time interval to sync transaction status. Default: 1 second</param>
         /// <param name="timeout">Time interval until transaction check timeout. Default: 60 seconds</param>
         /// <returns></returns>
@@ -302,7 +339,7 @@ namespace ErdCsharp.Domain.Data.Transaction
         /// <exception cref="TransactionException.TransactionWithSmartContractErrorException">Transaction has Smart Contract Results error</exception>
         /// <exception cref="TransactionException.FailedTransactionException">Transaction is failed</exception>
         /// <exception cref="TransactionException.InvalidTransactionException">Transaction is invalid</exception>
-        public async Task AwaitExecuted(IElrondProvider provider, TimeSpan? msCheck = null, TimeSpan? timeout = null)
+        public async Task AwaitExecuted(IMultiversxProvider provider, TimeSpan? msCheck = null, TimeSpan? timeout = null)
         {
             if (!msCheck.HasValue)
                 msCheck = TimeSpan.FromSeconds(1);
@@ -348,12 +385,12 @@ namespace ErdCsharp.Domain.Data.Transaction
         /// <summary>
         /// Wait for the transaction to be notarized
         /// </summary>
-        /// <param name="provider">Elrond Provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <param name="msCheck">Time interval to check if transaction is notarized. Default: 1 second</param>
         /// <param name="timeout">Time interval until transaction notarization check timeout. Default: 60 seconds</param>
         /// <returns></returns>
         /// <exception cref="TransactionException.TransactionStatusNotReachedException">Transaction notarized timeout is reached</exception>
-        public async Task AwaitNotarized(IElrondProvider provider, TimeSpan? msCheck = null, TimeSpan? timeout = null)
+        public async Task AwaitNotarized(IMultiversxProvider provider, TimeSpan? msCheck = null, TimeSpan? timeout = null)
         {
             if (!msCheck.HasValue)
                 msCheck = TimeSpan.FromSeconds(1);

@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace ErdCsharp.Provider
 {
-    public interface IElrondProvider
+    public interface IMultiversxProvider
     {
         #region accounts
 

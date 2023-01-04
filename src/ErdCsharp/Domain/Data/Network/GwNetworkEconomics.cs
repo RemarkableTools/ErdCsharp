@@ -30,9 +30,9 @@ namespace ErdCsharp.Domain.Data.Network
         /// <summary>
         /// Synchronize the economics with the network
         /// </summary>
-        /// <param name="provider">Elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <returns>NetworkEconomics</returns>
-        public static async Task<GwNetworkEconomics> GetFromNetwork(IElrondProvider provider)
+        public static async Task<GwNetworkEconomics> GetFromNetwork(IMultiversxProvider provider)
         {
             return new GwNetworkEconomics(await provider.GetGatewayNetworkEconomics());
         }

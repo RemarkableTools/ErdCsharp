@@ -10,7 +10,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - EGLD Transfer
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="receiver">Receiver address</param>
         /// <param name="egldValue">EGLD amount to send</param>
@@ -33,7 +33,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - EGLD Transfer to Smart Contract with default gas limit
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="smartContract">Smart Contract destination address</param>
         /// <param name="egldValue">EGLD amount to send</param>
@@ -63,7 +63,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - EGLD Transfer to Smart Contract
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="smartContract">Smart Contract destination address</param>
         /// <param name="egldValue">EGLD amount to send</param>

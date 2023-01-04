@@ -21,13 +21,13 @@ using ErdCsharp.Provider.Dtos.API.Token;
 
 namespace ErdCsharp.Provider
 {
-    public class ElrondProvider : IElrondProvider
+    public class MultiversxProvider : IMultiversxProvider
     {
         private readonly HttpClient _httpAPIClient;
         private readonly HttpClient _httpGatewayClient;
-        public readonly ElrondNetworkConfiguration NetworkConfiguration;
+        public readonly MultiversxNetworkConfiguration NetworkConfiguration;
 
-        public ElrondProvider(ElrondNetworkConfiguration configuration)
+        public MultiversxProvider(MultiversxNetworkConfiguration configuration)
         {
             NetworkConfiguration = configuration;
 

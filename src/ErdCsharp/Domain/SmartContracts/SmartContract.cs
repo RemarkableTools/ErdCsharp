@@ -61,7 +61,7 @@ namespace ErdCsharp.Domain.SmartContracts
         /// <summary>
         /// Allows one to execute - with no side-effects - a pure function of a Smart Contract and retrieve the execution results (the Virtual Machine Output).
         /// </summary>
-        /// <param name="provider">The elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <param name="address">The Address of the Smart Contract.</param>
         /// <param name="abiDefinition">The smart contract ABI Definition</param>
         /// <param name="endpoint">The name of the Pure Function to execute.</param>
@@ -69,7 +69,7 @@ namespace ErdCsharp.Domain.SmartContracts
         /// <param name="args">The arguments of the Pure Function. Can be empty</param>
         /// <returns>The response</returns>
         public static Task<T> QuerySmartContractWithAbiDefinition<T>(
-            IElrondProvider provider,
+            IMultiversxProvider provider,
             Address address,
             AbiDefinition abiDefinition,
             string endpoint,
@@ -87,14 +87,14 @@ namespace ErdCsharp.Domain.SmartContracts
         /// <summary>
         /// Allows one to execute - with no side-effects - a pure function of a Smart Contract and retrieve the execution of BooleanValue result (the Virtual Machine Output).
         /// </summary>
-        /// <param name="provider">The elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <param name="address">The Address of the Smart Contract.</param>
         /// <param name="endpoint">The name of the Pure Function to execute.</param>
         /// <param name="caller">Optional caller</param>
         /// <param name="args">The arguments of the Pure Function. Can be empty</param>
         /// <returns>The response</returns>
         public static async Task<BooleanValue> QueryBoolSmartContract(
-            IElrondProvider provider,
+            IMultiversxProvider provider,
             Address address,
             string endpoint,
             Address caller = null,
@@ -120,7 +120,7 @@ namespace ErdCsharp.Domain.SmartContracts
         /// <summary>
         /// Allows one to execute - with no side-effects - a pure function of a Smart Contract and retrieve the execution results (the Virtual Machine Output).
         /// </summary>
-        /// <param name="provider">The elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <param name="address">The Address of the Smart Contract.</param>
         /// <param name="outputTypeValue">Output value type of the response</param>
         /// <param name="endpoint">The name of the Pure Function to execute.</param>
@@ -128,7 +128,7 @@ namespace ErdCsharp.Domain.SmartContracts
         /// <param name="args">The arguments of the Pure Function. Can be empty</param>
         /// <returns>The response</returns>
         public static async Task<T> QuerySmartContract<T>(
-            IElrondProvider provider,
+            IMultiversxProvider provider,
             Address address,
             TypeValue outputTypeValue,
             string endpoint,
@@ -183,7 +183,7 @@ namespace ErdCsharp.Domain.SmartContracts
         }
 
         public static async Task<T[]> QueryArraySmartContract<T>(
-                IElrondProvider provider,
+                IMultiversxProvider provider,
                 Address address,
                 TypeValue outputTypeValue,
                 string endpoint,

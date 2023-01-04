@@ -44,7 +44,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - NFT/SFT/MetaESDT Transfer
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="receiver">Receiver address</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
@@ -78,7 +78,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - ESDT NFT Transfer to a Smart Contract with default gas limit
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="smartContract">Smart Contract destination address</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
@@ -123,7 +123,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - ESDT NFT Transfer to a Smart Contract
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="smartContract">Smart Contract destination address</param>
         /// <param name="gasLimit">Gas limit for transaction</param>
@@ -169,7 +169,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Issue a Non-Fungible Token with optional properties
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionName">The token name, length between 3 and 20 characters (alphanumeric characters only)</param>
         /// <param name="collectionTicker">The token ticker, length between 3 and 10 characters (alphanumeric UPPERCASE only)</param>
@@ -230,7 +230,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Issue a Semi-Fungible Token with optional properties
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionName">The token name, length between 3 and 20 characters (alphanumeric characters only)</param>
         /// <param name="collectionTicker">The token ticker, length between 3 and 10 characters (alphanumeric UPPERCASE only)</param>
@@ -291,7 +291,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Issue a MetaESDT with optional properties
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionName">The token name, length between 3 and 20 characters (alphanumeric characters only)</param>
         /// <param name="collectionTicker">The token ticker, length between 3 and 10 characters (alphanumeric UPPERCASE only)</param>
@@ -358,7 +358,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Convert SFT into MetaESDT
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="numberOfDecimals">Number of decimals, should be a numerical value between 0 and 18</param>
@@ -389,7 +389,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Create NFT/SFT
         /// 'ESDTRoleNFTCreate' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Account with ESDTRoleNFTCreate role</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="quantity">The quantity of NFT/SFT (1 for NFT)</param>
@@ -455,7 +455,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Create MetaESDT
         /// 'ESDTRoleNFTCreate' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Account with ESDTRoleNFTCreate role</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="quantity">The quantity of MetaESDT</param>
@@ -494,7 +494,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Transfer NFT/SFT/MetaESDT create role
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="fromAddress">Address to transfer the role from</param>
@@ -524,7 +524,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Stop NFT/SFT/MetaESDT create for a given collection
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <returns></returns>
@@ -549,7 +549,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - NFT/SFT Update Attributes
         /// 'ESDTRoleNFTUpdateAttributes' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="nftNonce">NFT nonce</param>
@@ -582,7 +582,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - NFT/SFT Add URIs
         /// 'ESDTRoleNFTAddURI' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="nftNonce">NFT nonce</param>
@@ -620,7 +620,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Only SFT Add quantity
         /// 'ESDTRoleNFTAddQuantity' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="sftNonce">SFT nonce</param>
@@ -652,7 +652,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - NFT/SFT/MetaESDT burn quantity
         /// 'ESDTRoleNFTBurn' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="nftNonce">NFT nonce</param>
@@ -683,7 +683,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request -  Freeze single NFT/SFT
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="nftNonce">NFT nonce</param>
@@ -713,7 +713,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Unfreeze single NFT/SFT
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="nftNonce">NFT nonce</param>
@@ -744,7 +744,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Wipe single NFT/SFTs
         /// Account must be frozen before the wipe operation
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="nftNonce">NFT nonce</param>
@@ -775,7 +775,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Set special role(s) for a given address
         /// 'canAddSpecialRoles' property for NFT/SFT/MetaESDT collection must be true
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="receiver">Receiver address</param>
         /// <param name="collectionIdentifier">Collection Identifier</param>
@@ -814,7 +814,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Unset special role(s) for a given address
         /// 'canAddSpecialRoles' property for NFT/SFT/MetaESDT collection must be true
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="receiver">Receiver address</param>
         /// <param name="collectionIdentifier">Collection Identifier</param>
@@ -853,7 +853,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Transfer management rights to another Account
         /// 'canChangeOwner' property for NFT/SFT/MetaESDT collection must be true
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="receiver">Address to receive management rights</param>
@@ -880,7 +880,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - NFT collection properties change
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="collectionIdentifier">Collection identifier</param>
         /// <param name="properties">Nft properties object</param>

@@ -1,16 +1,16 @@
 # [Documentation](./index.md)
 
 ### About SDK
-The library is basically a tool to query the Elrond API or Elrond Gateway and retrieve infromation about Network, Account, NFTs, Tokens, MetaESDTs, Smart Contract and so on.
+The library is basically a tool to query the MultiversX API or MultiversX Gateway and retrieve infromation about Network, Account, NFTs, Tokens, MetaESDTs, Smart Contract and so on.
 
 ---
 
 ### Quick start guide
 Define the network provider which can be MainNet/DevNet/TestNet
 ```csharp
-var provider = new ElrondProvider(new ElrondNetworkConfiguration(Network.DevNet));
+var provider = new MultiversxProvider(new MultiversxNetworkConfiguration(Network.DevNet));
 ```
-With this provider you can query the Elrond API data like in the following examples:
+With this provider you can query the MultiversX API data like in the following examples:
 ```csharp
 var networkConfig = await NetworkConfig.GetFromNetwork(provider);
 var account = Account.From(await provider.GetAccount("erd1sdslvlxvfnnflzj42l8czrcngq3xjjzkjp3rgul4ttk6hntr4qdsv6sets"));
