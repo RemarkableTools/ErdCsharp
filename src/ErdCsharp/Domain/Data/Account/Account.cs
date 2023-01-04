@@ -84,7 +84,7 @@ namespace ErdCsharp.Domain.Data.Account
         /// </summary>
         /// <param name="provider"></param>
         /// <returns></returns>
-        public async Task Sync(IElrondProvider provider)
+        public async Task Sync(IMultiversxProvider provider)
         {
             var accountDto = await provider.GetAccount(Address.Bech32);
 

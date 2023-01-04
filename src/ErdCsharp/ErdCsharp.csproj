@@ -1,6 +1,6 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <Description>⚡ Elrond C# SDK: Complex library for interacting with Elrond API</Description>
+    <Description>⚡ MultiversX C# SDK: Complex library for interacting with MultiversX API</Description>
     <TargetFrameworks>netstandard2.0;netcoreapp3.1;net461;net47;net5.0;net6.0;net7.0</TargetFrameworks>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>ErdCsharp</PackageId>

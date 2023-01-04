@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ErdCsharp.Configuration
 {
-    public class ElrondNetworkConfiguration
+    public class MultiversxNetworkConfiguration
     {
         public Network Network { get; }
         public Uri APIUri { get; }
@@ -14,7 +14,7 @@ namespace ErdCsharp.Configuration
         public Uri ExplorerUri { get; }
         public Uri WebWalletUri { get; set; }
 
-        public ElrondNetworkConfiguration(Network network)
+        public MultiversxNetworkConfiguration(Network network)
         {
             Network = network;
             switch (network)

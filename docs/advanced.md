@@ -3,9 +3,9 @@
 ## Token Transfer
 
 #### In the following example we will create a [`Token Transaction Request`](https://github.com/RemarkableTools/ErdCsharp/blob/master/src/ErdCsharp/TransactionsManager/TokenTransactionRequest.cs), sign it and send it to the network
-Get the [`ElrondProvider`](https://github.com/RemarkableTools/ErdCsharp/blob/master/src/ErdCsharp/Configuration/ElrondNetworkConfiguration.cs) instance
+Get the [`MultiversxProvider`](https://github.com/RemarkableTools/ErdCsharp/blob/master/src/ErdCsharp/Configuration/MultiversxNetworkConfiguration.cs) instance
 ```csharp
-var provider = new ElrondProvider(new ElrondNetworkConfiguration(Network.DevNet));
+var provider = new MultiversxProvider(new MultiversxNetworkConfiguration(Network.DevNet));
 ```
 Get a valid [`NetworkConfig`](https://github.com/RemarkableTools/ErdCsharp/blob/master/src/ErdCsharp/Domain/Data/Network/NetworkConfig.cs) instance
 ```csharp
@@ -40,7 +40,7 @@ Use the [`Private Signer`](https://github.com/RemarkableTools/ErdCsharp/blob/mas
 ```csharp
 var signedTransaction = transactionRequest.Sign(wallet);
 ```
-POST the transaction to Elrond API
+POST the transaction to MultiversX API
 ```csharp
 var response = await provider.SendTransaction(signedTransaction);
 ```

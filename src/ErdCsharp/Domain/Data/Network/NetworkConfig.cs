@@ -28,9 +28,9 @@ namespace ErdCsharp.Domain.Data.Network
         /// <summary>
         /// Synchronize the configuration with the network
         /// </summary>
-        /// <param name="provider">Elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <returns>NetworkConfig</returns>
-        public static async Task<NetworkConfig> GetFromNetwork(IElrondProvider provider)
+        public static async Task<NetworkConfig> GetFromNetwork(IMultiversxProvider provider)
         {
             return new NetworkConfig(await provider.GetGatewayNetworkConfig());
         }

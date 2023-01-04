@@ -28,9 +28,9 @@ namespace ErdCsharp.Domain.Data.Exchange
         /// <summary>
         /// Gets the Network Mex Economics
         /// </summary>
-        /// <param name="provider">Elrond provider</param>
+        /// <param name="provider">MultiversX provider</param>
         /// <returns>MexEconomics</returns>
-        public static async Task<MexEconomics> GetFromNetwork(IElrondProvider provider)
+        public static async Task<MexEconomics> GetFromNetwork(IMultiversxProvider provider)
         {
             return new MexEconomics(await provider.GetMexEconomics());
         }

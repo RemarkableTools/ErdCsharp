@@ -38,12 +38,12 @@ namespace ErdCsharp.Domain
         }
 
         /// <summary>
-        /// Elrond eGold token (EGLD)
+        /// MultiversX eGold token (EGLD)
         /// </summary>
         /// <returns></returns>
         public static ESDT EGLD()
         {
-            return new ESDT("ElrondeGold", Constants.EGLD, Constants.EGLD, Constants.EGLD, 18);
+            return new ESDT("EGLD", Constants.EGLD, Constants.EGLD, Constants.EGLD, 18);
         }
 
         public static ESDT ESDT_TOKEN(string esdtType, string name, string identifier, int decimalPrecision)

@@ -38,7 +38,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - FungibleESDT Transfer
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="receiver">Receiver address</param>
         /// <param name="tokenIdentifier">Token identifier</param>
@@ -67,7 +67,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - FungibleESDT Transfer to Smart Contract with default gas limit
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="smartContract">Smart Contract destination address</param>
         /// <param name="tokenIdentifier">Token identifier</param>
@@ -107,7 +107,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - FungibleESDT Transfer to Smart Contract
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="smartContract">Smart Contract destination address</param>
         /// <param name="gasLimit">Gas limit for transaction</param>
@@ -149,7 +149,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Issue a FungibleESDT Token with optional properties
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenName">The Token name, length between 3 and 20 characters (alphanumeric characters only)</param>
         /// <param name="tokenTicker">The Token ticker, length between 3 and 10 characters (alphanumeric UPPERCASE only)</param>
@@ -222,7 +222,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Local Mint operation
         /// 'ESDTRoleLocalMint' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <param name="supplyToMint">The new ESDT token supply to add locally</param>
@@ -250,7 +250,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Local Burn operation
         /// 'ESDTRoleLocalBurn' role must have been assigned to account
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <param name="supplyToBurn">The ESDT supply to burn locally</param>
@@ -277,7 +277,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Pause operation (suspend all transactions of the token, except minting, freezing/unfreezing and wiping)
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <returns></returns>
@@ -301,7 +301,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Unpause operation (allow transactions with the token again)
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <returns></returns>
@@ -325,7 +325,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Freeze operation (freeze the tokens held by a specific account - no tokens may be transferred to or from the frozen address)
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <param name="receiver">Address to freeze the Token</param>
@@ -352,7 +352,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - Unfreeze operation (allow transactions with the token to and from the address)
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <param name="receiver">Address to unfreeze the Token</param>
@@ -380,7 +380,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Wipe operation (wipe out all the tokens held by a frozen address)
         /// Account must be frozen before the wipe operation
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <param name="receiver">Address to wipe the Token</param>
@@ -408,7 +408,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Set special role(s) for a given address
         /// 'canAddSpecialRoles' property for token collection must be true
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="receiver">Receiver address</param>
         /// <param name="tokenIdentifier">Token Identifier</param>
@@ -447,7 +447,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Unset special role(s) for a given address
         /// 'canAddSpecialRoles' property for token collection must be true
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="receiver">Receiver address</param>
         /// <param name="tokenIdentifier">Token identifier</param>
@@ -486,7 +486,7 @@ namespace ErdCsharp.TransactionsManager
         /// Create transaction request - Transfer management rights to another Account
         /// 'canChangeOwner' property for token collection must be true
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <param name="receiver">Address to receive management rights</param>
@@ -513,7 +513,7 @@ namespace ErdCsharp.TransactionsManager
         /// <summary>
         /// Create transaction request - ESDT Token properties change
         /// </summary>
-        /// <param name="networkConfig">Elrond Network Configuration</param>
+        /// <param name="networkConfig">MultiversX Network Configuration</param>
         /// <param name="account">Sender Account</param>
         /// <param name="tokenIdentifier">Token identifier</param>
         /// <param name="properties">Token properties</param>
