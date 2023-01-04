@@ -188,6 +188,43 @@ namespace ErdCsharp.Domain.Data.Transaction
         }
 
         /// <summary>
+        /// Creates a new array of Transactions from data
+        /// </summary>
+        /// <param name="transactions">Array of Transaction Data Objects from API</param>
+        /// <returns>Array of Transaction objects</returns>
+        public static Transaction[] From(TransactionDto[] transactions)
+        {
+            return transactions.Select(transaction => new Transaction()
+            {
+                TxHash = transaction.TxHash,
+                GasLimit = new GasLimit(transaction.GasLimit),
+                GasPrice = transaction.GasPrice,
+                GasUsed = new GasLimit(transaction.GasUsed),
+                MiniBlockHash = transaction.MiniBlockHash,
+                Nonce = transaction.Nonce,
+                Receiver = Address.FromBech32(transaction.Receiver),
+                ReceiverAssets = Assets.From(transaction.ReceiverAssets),
+                ReceiverShard = transaction.ReceiverShard,
+                Round = transaction.Round,
+                Sender = Address.FromBech32(transaction.Sender),
+                SenderAssets = Assets.From(transaction.SenderAssets),
+                SenderShard = transaction.SenderShard,
+                Signature = transaction.Signature,
+                Status = transaction.Status,
+                Value = ESDTAmount.From(transaction.Value),
+                Fee = ESDTAmount.From(transaction.Fee),
+                CreationDate = Converter.TimestampToDateTime(transaction.Timestamp),
+                Data = DataCoder.DecodeData(transaction.Data),
+                Function = transaction.Function,
+                Action = Common.Action.From(transaction.Action),
+                SmartContractResult = Common.SmartContractResult.From(transaction.Results),
+                EGLDPrice = transaction.Price,
+                Logs = Log.From(transaction.Logs),
+                Operations = Operation.From(transaction.Operations)
+            }).ToArray();
+        }
+
+        /// <summary>
         /// Synchronizes the transaction fields with the ones queried from the Network
         /// </summary>
         /// <param name="provider">Elrond Provider</param>
