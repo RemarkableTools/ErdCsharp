@@ -80,10 +80,10 @@ namespace ErdCsharp.Domain.Data.Common
                 Name = transfer.Name,
                 Ticker = transfer.Ticker,
                 SvgUrl = transfer.SvgUrl,
-                Collection = ESDTIdentifierValue.From(transfer.Collection),
-                Token = ESDTIdentifierValue.From(transfer.Token),
+                Collection = transfer.Collection is null ? null : ESDTIdentifierValue.From(transfer.Collection), 
+                Token = transfer.Token is null ? null : ESDTIdentifierValue.From(transfer.Token),
                 Decimals = transfer.Decimals,
-                Identifier = ESDTIdentifierValue.From(transfer.Identifier),
+                Identifier = transfer.Identifier is null ? null : ESDTIdentifierValue.From(transfer.Identifier),
                 Value = ESDTAmount.From(transfer.Value,
                                         ESDT.ESDT_TOKEN(transfer.Type, transfer.Name, transfer.Identifier, transfer.Decimals ?? 0))
             }).ToArray();
@@ -196,6 +196,7 @@ namespace ErdCsharp.Domain.Data.Common
         public string Name { get; private set; }
         public Address Sender { get; private set; }
         public Address Receiver { get; private set; }
+        public string Data { get; private set; }
         public ESDTAmount Value { get; private set; }
         public int? Decimals { get; private set; }
         public string SvgUrl { get; private set; }
@@ -214,13 +215,14 @@ namespace ErdCsharp.Domain.Data.Common
                 Action = operation.Action,
                 Type = operation.Type,
                 EsdtType = operation.EsdtType,
-                Collection = ESDTIdentifierValue.From(operation.Collection),
-                Identifier = ESDTIdentifierValue.From(operation.Identifier),
+                Collection = operation.Collection is null ? null : ESDTIdentifierValue.From(operation.Collection),
+                Identifier = operation.Identifier is null ? null : ESDTIdentifierValue.From(operation.Identifier),
                 Name = operation.Name,
                 Sender = Address.FromBech32(operation.Sender),
                 Receiver = Address.FromBech32(operation.Receiver),
-                Value = ESDTAmount.ESDT(operation.Value,
-                                        ESDT.ESDT_TOKEN(operation.EsdtType, operation.Name, operation.Identifier, operation.Decimals ?? 0)),
+                Data = operation.Data,
+                Value = operation.Value is null ? null : ESDTAmount.ESDT(operation.Value,
+                                                                         ESDT.ESDT_TOKEN(operation.EsdtType, operation.Name, operation.Identifier, operation.Decimals ?? 0)),
                 Decimals = operation.Decimals,
                 SvgUrl = operation.SvgUrl,
                 SenderAssets = Assets.From(operation.SenderAssets),

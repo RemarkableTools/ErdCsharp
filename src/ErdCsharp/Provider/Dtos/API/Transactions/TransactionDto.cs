@@ -109,6 +109,7 @@ namespace ErdCsharp.Provider.Dtos.API.Transactions
         public string Name { get; set; }
         public string Sender { get; set; }
         public string Receiver { get; set; }
+        public string Data { get; set; }
         public string Value { get; set; }
         public int? Decimals { get; set; }
         public string SvgUrl { get; set; }

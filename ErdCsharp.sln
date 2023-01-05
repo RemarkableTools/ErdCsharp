@@ -23,6 +23,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MS Testing", "tests\MS Test
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ErdCsharp-PrivateSigner", "src\ErdCsharp-PrivateSigner\ErdCsharp-PrivateSigner.csproj", "{5A894B77-6DA9-49DE-BBDC-7E3B05C9F615}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console Testing", "Console Testing\Console Testing.csproj", "{74868617-0C87-4547-B526-E4347B15CC3A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{5A894B77-6DA9-49DE-BBDC-7E3B05C9F615}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A894B77-6DA9-49DE-BBDC-7E3B05C9F615}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A894B77-6DA9-49DE-BBDC-7E3B05C9F615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74868617-0C87-4547-B526-E4347B15CC3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74868617-0C87-4547-B526-E4347B15CC3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74868617-0C87-4547-B526-E4347B15CC3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74868617-0C87-4547-B526-E4347B15CC3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -49,6 +55,7 @@ Global
 		{B139BD44-BE9E-4836-B900-EA4DB00A1BD1} = {D56A890E-8033-4A93-87CF-586BA916BC07}
 		{149FA3CD-11A5-4402-A923-4F8B87F894A6} = {DF07F928-D972-4F69-9E8C-E6EA16C25BF3}
 		{5A894B77-6DA9-49DE-BBDC-7E3B05C9F615} = {D56A890E-8033-4A93-87CF-586BA916BC07}
+		{74868617-0C87-4547-B526-E4347B15CC3A} = {DF07F928-D972-4F69-9E8C-E6EA16C25BF3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9B29FC9F-BF63-432E-8920-99FBCE6DA974}
