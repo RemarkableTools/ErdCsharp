@@ -150,6 +150,11 @@ namespace ErdCsharp.Domain.Data.Transaction
             return new Transaction(txHash);
         }
 
+        public static Transaction[] From(string[] txHashes)
+        {
+            return txHashes.Select(txHash => new Transaction(txHash)).ToArray();
+        }
+
         /// <summary>
         /// Creates a new Transaction from data
         /// </summary>
