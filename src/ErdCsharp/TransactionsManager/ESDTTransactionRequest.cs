@@ -546,7 +546,7 @@ namespace ErdCsharp.TransactionsManager
         }
 
         /// <summary>
-        /// Create transaction request - NFT/SFT Update Attributes
+        /// Create transaction request - NFT (only) Update Attributes
         /// 'ESDTRoleNFTUpdateAttributes' role must have been assigned to account
         /// </summary>
         /// <param name="networkConfig">MultiversX Network Configuration</param>
@@ -579,7 +579,7 @@ namespace ErdCsharp.TransactionsManager
         }
 
         /// <summary>
-        /// Create transaction request - NFT/SFT Add URIs
+        /// Create transaction request - NFT (only) Add URIs
         /// 'ESDTRoleNFTAddURI' role must have been assigned to account
         /// </summary>
         /// <param name="networkConfig">MultiversX Network Configuration</param>
@@ -617,7 +617,7 @@ namespace ErdCsharp.TransactionsManager
         }
 
         /// <summary>
-        /// Create transaction request - Only SFT Add quantity
+        /// Create transaction request - SFT (only) Add quantity
         /// 'ESDTRoleNFTAddQuantity' role must have been assigned to account
         /// </summary>
         /// <param name="networkConfig">MultiversX Network Configuration</param>
