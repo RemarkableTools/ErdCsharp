@@ -303,7 +303,7 @@ namespace ErdCsharp.Domain.Data.Transaction
         /// <returns></returns>
         public bool IsExecuted()
         {
-            return IsSuccessful() || IsInvalid();
+            return IsSuccessful() || IsFailed() || IsInvalid();
         }
 
         /// <summary>
@@ -312,7 +312,7 @@ namespace ErdCsharp.Domain.Data.Transaction
         /// <returns></returns>
         public bool IsSuccessful()
         {
-            return Status == "executed" || Status == "success" || Status == "successful";
+            return Status == "success";
         }
 
         /// <summary>
@@ -321,7 +321,7 @@ namespace ErdCsharp.Domain.Data.Transaction
         /// <returns></returns>
         public bool IsFailed()
         {
-            return Status == "fail" || Status == "failed" || Status == "unsuccessful" || IsInvalid();
+            return Status == "fail";
         }
 
         /// <summary>
@@ -352,13 +352,13 @@ namespace ErdCsharp.Domain.Data.Transaction
             if (!timeout.HasValue)
                 timeout = TimeSpan.FromSeconds(60);
 
-            var currentIteration = 0;
+            var secondsPassed = 0;
             do
             {
                 await Task.Delay(msCheck.Value);
                 await Sync(provider);
-                currentIteration++;
-            } while (!IsExecuted() && currentIteration < timeout.Value.TotalSeconds);
+                secondsPassed++;
+            } while (!IsExecuted() && secondsPassed < timeout.Value.TotalSeconds);
 
             if (!IsExecuted())
                 throw new TransactionException.TransactionStatusNotReachedException(TxHash, "Executed");
