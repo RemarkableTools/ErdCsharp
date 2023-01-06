@@ -6,7 +6,7 @@
     <PackageId>ErdCsharp</PackageId>
     <Authors>Remarkable Tools</Authors>
     <Product />
-    <PackageTags>Elrond;MultiversX;ErdCsharp;ErdDotNet</PackageTags>
+    <PackageTags>MultiversX;ErdCsharp;ErdDotNet</PackageTags>
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/RemarkableTools/ErdCsharp</RepositoryUrl>
     <RepositoryType>GitHub</RepositoryType>
