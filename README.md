@@ -2,7 +2,7 @@
 ⚡ MultiversX C# SDK: Complex library for interacting with MultiversX API
 
 ## How to install?
-ErdCsharp SDK is delivered via nuget package:
+ErdCsharp SDK is delivered via nuget package:<br />
 [![Package](https://img.shields.io/nuget/v/ErdCsharp)](https://www.nuget.org/packages/ErdCsharp/)
 
 ## Main Features
