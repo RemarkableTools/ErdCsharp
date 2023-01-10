@@ -20,22 +20,22 @@ namespace ErdCsharp.Configuration
             switch (network)
             {
                 case Network.MainNet:
-                    APIUri = new Uri("https://api.elrond.com/");
-                    GatewayUri = new Uri("https://gateway.elrond.com/");
-                    ExplorerUri = new Uri("https://explorer.elrond.com/");
-                    WebWalletUri = new Uri("https://wallet.elrond.com/");
+                    APIUri = new Uri("https://api.multiversx.com/");
+                    GatewayUri = new Uri("https://gateway.multiversx.com/");
+                    ExplorerUri = new Uri("https://explorer.multiversx.com/");
+                    WebWalletUri = new Uri("https://wallet.multiversx.com/");
                     break;
                 case Network.DevNet:
-                    APIUri = new Uri("https://devnet-api.elrond.com/");
-                    GatewayUri = new Uri("https://devnet-gateway.elrond.com/");
-                    ExplorerUri = new Uri("https://devnet-explorer.elrond.com/");
-                    WebWalletUri = new Uri("https://devnet-wallet.elrond.com/");
+                    APIUri = new Uri("https://devnet-api.multiversx.com/");
+                    GatewayUri = new Uri("https://devnet-gateway.multiversx.com/");
+                    ExplorerUri = new Uri("https://devnet-explorer.multiversx.com/");
+                    WebWalletUri = new Uri("https://devnet-wallet.multiversx.com/");
                     break;
                 case Network.TestNet:
-                    APIUri = new Uri("https://testnet-api.elrond.com/");
-                    GatewayUri = new Uri("https://testnet-gateway.elrond.com/");
-                    ExplorerUri = new Uri("https://testnet-explorer.elrond.com/");
-                    WebWalletUri = new Uri("https://testnet-wallet.elrond.com/");
+                    APIUri = new Uri("https://testnet-api.multiversx.com/");
+                    GatewayUri = new Uri("https://testnet-gateway.multiversx.com/");
+                    ExplorerUri = new Uri("https://testnet-explorer.multiversx.com/");
+                    WebWalletUri = new Uri("https://testnet-wallet.multiversx.com/");
                     break;
                 default:
                     throw new ArgumentOutOfRangeException(nameof(network), network, null);

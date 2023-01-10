@@ -352,12 +352,12 @@ namespace ErdCsharp.Domain.Data.Transaction
             if (!timeout.HasValue)
                 timeout = TimeSpan.FromSeconds(60);
 
-            var secondsPassed = 0;
+            var secondsPassed = 0d;
             do
             {
                 await Task.Delay(msCheck.Value);
                 await Sync(provider);
-                secondsPassed++;
+                secondsPassed += msCheck.Value.TotalSeconds;
             } while (!IsExecuted() && secondsPassed < timeout.Value.TotalSeconds);
 
             if (!IsExecuted())
@@ -403,15 +403,15 @@ namespace ErdCsharp.Domain.Data.Transaction
             if (!timeout.HasValue)
                 timeout = TimeSpan.FromSeconds(60);
 
-            var currentIteration = 0;
+            var secondsPassed = 0d;
             do
             {
                 await Task.Delay(msCheck.Value);
                 await Sync(provider);
-                currentIteration++;
-            } while (string.IsNullOrEmpty(MiniBlockHash) && currentIteration < timeout.Value.TotalSeconds);
+                secondsPassed += msCheck.Value.TotalSeconds;
+            } while (string.IsNullOrEmpty(MiniBlockHash) && secondsPassed < timeout.Value.TotalSeconds);
 
-            if (currentIteration >= timeout.Value.TotalSeconds)
+            if (secondsPassed >= timeout.Value.TotalSeconds)
                 throw new TransactionException.TransactionStatusNotReachedException(TxHash, "Notarized");
         }
     }

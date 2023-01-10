@@ -54,7 +54,7 @@ Console.WriteLine($"Transaction executed with status {transaction.Status}");
 ---
 
 ## Smart Contract interaction
-The example is created for this [adder](https://github.com/ElrondNetwork/elrond-wasm-rs/tree/master/contracts/examples/adder) contract.
+The example is created for this [adder](https://github.com/multiversx/mx-sdk-rs/tree/master/contracts/examples/adder) contract.
 #### Create a [`EGLD Transaction Request`](https://github.com/RemarkableTools/ErdCsharp/blob/master/src/ErdCsharp/TransactionsManager/EGLDTransactionRequest.cs) to a Smart Contract, sign it and send it to the network
 ```csharp
 var transactionRequest = EGLDTransactionRequest.EGLDTransferToSmartContract(
